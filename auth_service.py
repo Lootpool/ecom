@@ -41,6 +41,6 @@ def signup():
         return jsonify({"success":False,"msg":"AUTH SERVICE"+str(e)}),200
 
 def main():
-    app.run(debug=True,host="0.0.0.0",port=10000)
+    app.run(debug=False,host="0.0.0.0",port=10000)
 if __name__=='__main__':
     main()
