@@ -30,7 +30,7 @@ def view_order():
         conn=sqlite3.connect("./Database/orders.db")
         conn.row_factory=sqlite3.Row
         cur=conn.cursor()
-        cur.execucte("SELECT * FROM orders WHERE oid=?",(oid,))
+        cur.execute("SELECT * FROM orders WHERE oid=?",(oid,))
         row=cur.fetchone()
         result=dict(row)
         conn.commit()
