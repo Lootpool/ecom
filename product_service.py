@@ -4,9 +4,6 @@ import requests
 
 app=Flask(__name__)
 
-AUTH_SERVICE="http://localhost:5001"
-ORDER_SERVICE="http://localhost:5002"
-PRODUCT_SERVICE="http://localhost:5003"
 
 @app.route("/add",methods=["POST"])
 def add_product():
@@ -75,6 +72,6 @@ def view_products():
 
 
 def main():
-    app.run(debug=True,host="0.0.0.0",port=5003)
+    app.run(debug=True,host="0.0.0.0",port=10000)
 if __name__=='__main__':
     main()

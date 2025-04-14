@@ -4,9 +4,7 @@ import requests
 
 app=Flask(__name__)
 
-AUTH_SERVICE="http://localhost:5001"
-ORDER_SERVICE="http://localhost:5002"
-PRODUCT_SERVICE="http://localhost:5003"
+
 
 @app.route("/addorder",methods=["POST"])
 def add_order():
@@ -42,6 +40,6 @@ def view_order():
         return jsonify({"success":False,"msg":"ORDER SERVICE"+str(e)}),200
     
 def main():
-    app.run(debug=True,host="0.0.0.0",port=5002)
+    app.run(debug=True,host="0.0.0.0",port=10000)
 if __name__=='__main__':
     main()

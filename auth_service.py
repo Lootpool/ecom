@@ -4,9 +4,6 @@ import requests
 
 app=Flask(__name__)
 
-AUTH_SERVICE="http://localhost:5001"
-ORDER_SERVICE="http://localhost:5002"
-PRODUCT_SERVICE="http://localhost:5003"
 
 @app.route("/login",methods=["POST"])
 def login():
@@ -44,6 +41,6 @@ def signup():
         return jsonify({"success":False,"msg":"AUTH SERVICE"+str(e)}),200
 
 def main():
-    app.run(debug=True,host="0.0.0.0",port=5001)
+    app.run(debug=True,host="0.0.0.0",port=10000)
 if __name__=='__main__':
     main()
